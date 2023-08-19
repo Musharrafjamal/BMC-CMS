@@ -1,0 +1,90 @@
+.all-user-dailog {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.all-user-form {
+  max-width: 60%;
+  width: 100%;
+  /* background-color: whitesmoke; */
+  padding: 20px;
+  background: linear-gradient(
+    191deg,
+    rgba(150, 141, 255, 1) 27%,
+    rgba(90, 184, 255, 1) 100%
+  );
+  box-shadow: rgba(0, 0, 0, 0.34) 0px 3px 8px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #000000b6;
+}
+
+.label {
+  color: rgba(0, 0, 0, 0.671);
+  font-weight: bold;
+}
+
+.input {
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  font-size: 1rem;
+  color: #4a5568;
+  outline: none;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  transition: all 0.2s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.185) 0px 5px 15px;
+  text-align: center;
+}
+
+.input:focus {
+  background-color: #fff;
+  box-shadow: 0 0 0 2px #cbd5e0;
+}
+
+.submit {
+  background-color: #4a5568;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.cancel{
+    background-color: #4a5568;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    margin-right: 1rem;
+}
+.submit:hover{
+  background-color: seagreen;
+}
+.cancel:hover{
+  background-color: rgb(255, 17, 0);
+}
+.all-user-inputs{
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}

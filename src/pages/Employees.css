@@ -1,0 +1,25 @@
+.employees-container {
+  overflow-x: hidden;
+}
+
+.emp-main-conatiner {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+
+.emp-cards-container {
+  margin: 1rem 0rem;
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(2, 49%);
+  grid-gap: 1rem;
+}
+.alluser-dailog{
+  overflow: hidden;
+
+}

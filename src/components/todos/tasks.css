@@ -1,0 +1,59 @@
+/* Show task Section */
+
+.show-task-container {
+  padding: 2rem;
+  background: linear-gradient(
+    191deg,
+    rgba(150, 141, 255, 1) 27%,
+    rgba(90, 184, 255, 1) 100%
+  );
+  outline: none;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+}
+.new-task {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 1rem;
+}
+.delete-task-btn {
+  padding: 5px 10px;
+  border: unset;
+  border-radius: 5px;
+  color: #212121;
+  z-index: 1;
+  background: #e8e8e8;
+  position: relative;
+  font-weight: 1000;
+  transition: all 250ms;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.delete-task-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  border-radius: 5px;
+  background-color: rgba(255, 0, 0, 0.802);
+  z-index: -1;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
+}
+
+.delete-task-btn:hover {
+  color: #e8e8e8;
+}
+
+.delete-task-btn:hover::before {
+  width: 100%;
+}

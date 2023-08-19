@@ -1,0 +1,164 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.table-container {
+  text-align: center;
+  width: 80%;
+  overflow-x: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  box-shadow: rgba(0, 0, 0, 0.34) 0px 3px 8px;
+}
+.table-container::-webkit-scrollbar {
+    display: none;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  color: rgba(0, 0, 0, 0.658);
+  box-shadow: rgba(0, 0, 0, 0.34) 0px 3px 8px;
+}
+th,
+td {
+  padding: 1rem 0.5rem;
+}
+th,
+td:first-child {
+  padding-left: 1rem;
+}
+caption {
+  padding: 0.75em;
+  background: linear-gradient(
+    191deg,
+    rgba(150, 141, 255, 1) 27%,
+    rgba(90, 184, 255, 1) 100%
+  );
+  box-shadow: rgba(0, 0, 0, 0.34) 0px 3px 8px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  border-radius: 8px 8px 0px 0px;
+}
+
+thead {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 2;
+}
+tr:nth-of-type(2n) {
+  background-color: rgba(29, 29, 29, 0.062);
+}
+.update-btn {
+  background-color: #359f63;
+  color: #fff;
+  padding: 1em 1.5em;
+  border-radius: 5px;
+  font-size: 0.75rem;
+}
+.update-btn:hover {
+  background-color: seagreen;
+}
+.delete-btn {
+  background-color: #ff3f3f;
+  color: #fff;
+  padding: 1em 1.5em;
+  border-radius: 5px;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+.delete-btn:hover {
+  background-color: #ff2c2c;
+}
+@media (max-width: 650px) {
+  .heading img {
+    width: 50%;
+  }
+  table {
+    width: 85%;
+  }
+  caption {
+    text-align: start;
+  }
+  tr {
+    text-align: start;
+  }
+  th {
+    display: none;
+  }
+  td {
+    display: grid;
+  }
+  td:first-child {
+    padding-top: 2em;
+  }
+  td:last-child {
+    padding-bottom: 2em;
+  }
+  td::before {
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+  td:nth-of-type(1)::before {
+    content: "id";
+  }
+  td:nth-of-type(2)::before {
+    content: "name";
+  }
+  td:nth-of-type(3)::before {
+    content: "gender";
+  }
+  td:nth-of-type(4)::before {
+    content: "age";
+  }
+  td:nth-of-type(5)::before {
+    content: "phone number";
+  }
+  td:nth-of-type(6)::before {
+    content: "e-mail id";
+  }
+  .delete-btn,
+  .update-btn {
+    text-align: center;
+  }
+}
+.update-task-btn {
+  padding: 5px 10px;
+  margin-left: 1rem;
+  border: unset;
+  border-radius: 5px;
+  color: #212121;
+  z-index: 1;
+  background: #e8e8e8;
+  position: relative;
+  font-weight: 1000;
+  transition: all 250ms;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.update-task-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  border-radius: 5px;
+  background-color: seagreen;
+  z-index: -1;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
+}
+
+.update-task-btn:hover {
+  color: #e8e8e8;
+}
+
+.update-task-btn:hover::before {
+  width: 100%;
+}

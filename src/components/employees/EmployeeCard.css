@@ -1,0 +1,68 @@
+.emp-profile {
+  width: 100%;
+  height: 20vh;
+  background: linear-gradient(60deg, rgba(150,141,255,1) 27%, rgba(90,184,255,1) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.493) 0px 0px 8px;
+  overflow-x: hidden;
+}
+.emp-img{
+  width: 100px;
+  height: 100px;
+  margin: 0 1rem;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.493) 0px 3px 8px;
+}
+.emp-info {
+  text-align: left;
+  width: 60%;
+}
+.emp-info h1{
+  font-size: 1.3rem;
+  margin-bottom: .5rem;
+  color: rgba(0, 0, 0, 0.863);
+}
+
+.emp-delete-btn {
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.651);
+  font-family: inherit;
+  font-weight: 800;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  background: none;
+  text-transform: uppercase;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: color;
+}
+
+.emp-delete-btn:focus,
+.emp-delete-btn:hover {
+  color: red;
+}
+
+.emp-delete-btn:focus:after,
+.emp-delete-btn:hover:after {
+  width: 100%;
+  left: 0%;
+}
+
+.emp-delete-btn:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: rgba(255, 0, 0, 0.671);
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
+}

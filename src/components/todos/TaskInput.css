@@ -1,0 +1,116 @@
+.task-input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.task-input-container input[type="text"] {
+  width: 80%;
+  height: 100%;
+  outline: none;
+  border: none;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.647);
+  border-radius: 10px;
+  margin-right: 1rem;
+  background-color: whitesmoke;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.task-input-container input[type="text"]:hover,
+.task-input-container input[type="text"]:focus {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.task-input-container input[type="text"]::placeholder {
+  text-align: center;
+}
+.add-task-btn {
+  padding: 0.5rem;
+  background: rgb(150, 141, 255);
+  background: linear-gradient(
+    191deg,
+    rgba(150, 141, 255, 1) 27%,
+    rgba(90, 184, 255, 1) 100%
+  );
+  outline: none;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all ease-in-out 200ms;
+}
+.add-task-btn:hover {
+  background: rgb(150, 141, 255);
+  background: linear-gradient(
+    60deg,
+    rgba(150, 141, 255, 1) 27%,
+    rgba(90, 184, 255, 1) 100%
+  );
+}
+.scale-up-bottom {
+  -webkit-animation: scale-up-bottom 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: scale-up-bottom 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+@-webkit-keyframes scale-up-bottom {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+  }
+}
+@keyframes scale-up-bottom {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+  }
+}
+
+.scale-up-bl {
+  -webkit-animation: scale-up-bl 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: scale-up-bl 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+@-webkit-keyframes scale-up-bl {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+  }
+}
+@keyframes scale-up-bl {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+  }
+}

@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Route, Routes } from "react-router-dom";
+import Login from "./pages/Login";
+import Dashboard from "./pages/Dashboard";
+import Home from "./pages/Home";
+import AllUsers from "./pages/AllUsers";
+import Employees from "./pages/Employees";
+import PrivateRoute from "./PrivateRoute";
+import { useState } from "react";
+
 
 function App() {
+  const [username, setUsername] = useState('')
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login gettingUsername={data => setUsername(data)} />} />
+
+      {/* Private routes */}
+      <Route element={<PrivateRoute />}>
+        <Route path="/dashboard" element={<Dashboard email={username} />} />
+        <Route path="/users" element={<AllUsers email={username} />} />
+        <Route path="/employees" element={<Employees email={username} />} />
+      </Route>
+      </Routes>
+    </>
   );
 }
 

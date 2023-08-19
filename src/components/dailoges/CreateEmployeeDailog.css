@@ -1,0 +1,152 @@
+.all-user-dailog {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.all-user-form {
+  max-width: 50%;
+  width: 100%;
+
+  padding: 20px;
+  background: linear-gradient(
+    191deg,
+    rgba(150, 141, 255, 1) 27%,
+    rgba(90, 184, 255, 1) 100%
+  );
+  box-shadow: rgba(0, 0, 0, 0.34) 0px 3px 8px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #000000b6;
+}
+
+.label {
+  color: rgba(0, 0, 0, 0.671);
+  font-weight: bold;
+}
+
+.input {
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  font-size: 1rem;
+  color: #4a5568;
+  outline: none;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  transition: all 0.2s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.185) 0px 5px 15px;
+  text-align: center;
+}
+
+.input:focus {
+  background-color: #fff;
+  box-shadow: 0 0 0 2px #cbd5e0;
+}
+
+.submit {
+  background-color: #4a5568;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  margin-right: 1rem;
+}
+.cancel {
+  background-color: #4a5568;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.submit:hover {
+  background-color: seagreen;
+}
+.cancel:hover {
+  background-color: rgb(255, 17, 0);
+}
+.all-user-inputs {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.scale-up-center {
+  -webkit-animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1)
+    both;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+.custom-file-input {
+  color: transparent;
+  width: 23.5%;
+}
+.custom-file-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.custom-file-input::before {
+  content: "Select Photo";
+  color: black;
+  display: inline-block;
+  background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
+  border: 1px solid #999;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 1rem;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+}
+.custom-file-input:hover::before {
+  border-color: black;
+}
+.custom-file-input:active {
+  outline: 0;
+}
+.custom-file-input:active::before {
+  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
+button:disabled,
+button[disabled]{
+  border: 1px solid #999999;
+  color: white;
+  cursor:not-allowed;
+  background-color: #000000;
+}
