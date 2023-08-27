@@ -81,7 +81,7 @@ const AllUsers = ({ email }) => {
   };
 
   const onDeleteUser = async (id) => {
-    const userDoc = doc(db, "users", id);
+    const userDoc = doc(db, email, id);
     try {
       await deleteDoc(userDoc);
     } catch (err) {
@@ -98,7 +98,7 @@ const AllUsers = ({ email }) => {
 
   const onUpdateUser = async () => {
     console.log(userId);
-    const userDoc = doc(db, "users", userId);
+    const userDoc = doc(db, email, userId);
     try {
       await updateDoc(userDoc, {
         fullname: updatedFullname,

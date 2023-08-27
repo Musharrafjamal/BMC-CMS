@@ -9,6 +9,14 @@ const PrivateRoute = () => {
     // keep the previous navigation stack
     <Navigate to="/login" state={{ from: location }} replace />
   );
+  // if( projectAuth.currentUser.email === 'musharraf@1.com'){
+  //   return <Outlet />
+  // }
+  // if ( projectAuth.currentUser) {
+  //   return <Navigate to="/users" state={{ from: location }} />
+  // } else {
+  //   return <Navigate to="/login" state={{ from: location }} replace />
+  // }
 };
 
 export default PrivateRoute;

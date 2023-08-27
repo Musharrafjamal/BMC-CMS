@@ -5,6 +5,8 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import {BiUserCircle} from 'react-icons/bi'
 
+import { projectAuth } from "../firebaseconfig";
+
 const Login = ({ gettingUsername }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -18,9 +20,16 @@ const Login = ({ gettingUsername }) => {
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         const user = userCredential.user;
-        navigate("/dashboard");
         gettingUsername(user.email)
         setErr(false);
+        if( projectAuth.currentUser.email === 'musharraf@1.com'){
+          return navigate("/dashboard");
+        }
+        if ( projectAuth.currentUser) {
+          return navigate("/users");
+        } else {
+          return navigate("/");
+        }
       })
       .catch((error) => {
         setErr(true);

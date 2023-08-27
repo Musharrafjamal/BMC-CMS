@@ -4,7 +4,7 @@
   padding: 2rem;
   background: linear-gradient(
     191deg,
-    rgba(150, 141, 255, 1) 27%,
+    #968dff 27%,
     rgba(90, 184, 255, 1) 100%
   );
   outline: none;
@@ -17,9 +17,12 @@
 }
 .new-task {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
   margin-top: 1rem;
+}
+.new-task li{
+  width: 100%;
 }
 .delete-task-btn {
   padding: 5px 10px;

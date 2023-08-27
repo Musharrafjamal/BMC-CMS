@@ -22,7 +22,7 @@ const Table = ({ listOfUsers, onDeleteUser, passingUserId, setOpenDailog }) => {
         <tbody>
           {listOfUsers.map((user, index) => {
             return (
-              <tr key={user.userId}>
+              <tr key={index}>
                 <td>{index + 1}</td>
                 <td>{user.fullname}</td>
                 <td>{user.gender}</td>
