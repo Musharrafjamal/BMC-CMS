@@ -8,7 +8,12 @@ const UpdateDailog = ({
     setUpdatedAge,
     setUpdatedPHoneNUmber,
     setUpdatedUserEmail,
-    onUpdateUser
+    onUpdateUser,
+    // username,
+    // userAge,
+    // userGender,
+    // userEmail,
+    // userPhone
   }) => {
     return (
       <div className="all-user-dailog">

@@ -19,10 +19,10 @@ const Login = ({ gettingUsername }) => {
 
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
-        const user = userCredential.user;
+        const user = userCredential.user
         gettingUsername(user.email)
         setErr(false);
-        if( projectAuth.currentUser.email === 'musharraf@1.com'){
+        if( projectAuth.currentUser.email === process.env.REACT_APP_ADMIN_EMAIL){
           return navigate("/dashboard");
         }
         if ( projectAuth.currentUser) {

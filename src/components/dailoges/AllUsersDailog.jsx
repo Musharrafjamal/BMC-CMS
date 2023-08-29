@@ -12,7 +12,7 @@ const AllUsersDailog = ({
 }) => {
   return (
     <div className="all-user-dailog">
-      <form className="all-user-form">
+      <form className="all-user-form" onSubmit={(e) => {e.preventDefault()}}>
         <span className="title">Create new user</span>
         <div className="all-user-inputs">
           <div className="create-user-col-1">

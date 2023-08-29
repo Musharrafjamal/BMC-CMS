@@ -7,6 +7,7 @@ import UpdateDailog from "../components/dailoges/UpdateDailog";
 
 import {
   getDocs,
+  // getDoc,
   collection,
   addDoc,
   doc,
@@ -97,7 +98,6 @@ const AllUsers = ({ email }) => {
 
 
   const onUpdateUser = async () => {
-    console.log(userId);
     const userDoc = doc(db, email, userId);
     try {
       await updateDoc(userDoc, {
@@ -112,6 +112,26 @@ const AllUsers = ({ email }) => {
     }
     getUserList();
   };
+  // const [userName, setUserName] = useState('')
+  // const [userGender, setUserGender] = useState('')
+  // const [userAge, setUserAge] = useState('')
+  // const [updatedEmail, setUpdatedEmail] = useState('')
+  // const [userPhone, setUserPhone] = useState('')
+  // const getUserData = async () => {
+  //   const userDoc = doc(db, email, userId);
+  //   try{
+  //     const docSnap = await getDoc(userDoc);
+  //     const user = docSnap.data()
+  //     setUserName(user.fullname)
+  //     setUserGender(user.gender)
+  //     setUserAge(user.age)
+  //     setUserPhone(user.phone)
+  //     setUpdatedEmail(user.email)
+  //   }catch(err) {
+  //     console.error(err)
+  //   }
+
+  // }
 
   return (
     <div className="all-user-container">

@@ -10,7 +10,8 @@
   overflow-x: hidden;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  box-shadow: rgba(0, 0, 0, 0.34) 0px 3px 8px;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.445);
 }
 .table-container::-webkit-scrollbar {
     display: none;
@@ -19,7 +20,7 @@ table {
   border-collapse: collapse;
   width: 100%;
   color: rgba(0, 0, 0, 0.658);
-  box-shadow: rgba(0, 0, 0, 0.34) 0px 3px 8px;
+  border: 2px solid rgba(0, 0, 0, 0.445);
 }
 th,
 td {
@@ -36,21 +37,25 @@ caption {
     rgba(150, 141, 255, 1) 27%,
     rgba(90, 184, 255, 1) 100%
   );
-  box-shadow: rgba(0, 0, 0, 0.34) 0px 3px 8px;
+  border-right: 2px solid rgba(0, 0, 0, 0.445);
+  border-top: 2px solid rgba(0, 0, 0, 0.445);
+  border-left: 2px solid rgba(0, 0, 0, 0.445);
+
   color: white;
   font-weight: bold;
   font-size: 1.5rem;
   border-radius: 8px 8px 0px 0px;
 }
-
 thead {
   position: sticky;
   top: 0;
   background-color: white;
   z-index: 2;
 }
-tr:nth-of-type(2n) {
-  background-color: rgba(29, 29, 29, 0.062);
+tr:nth-of-type(n) {
+  /* background-color: rgba(29, 29, 29, 0.171); */
+  border-bottom: 2px solid rgba(0, 0, 0, 0.158);
+
 }
 .update-btn {
   background-color: #359f63;

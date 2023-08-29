@@ -6,7 +6,8 @@
   align-items: center;
   justify-content: left;
   border-radius: 12px;
-  box-shadow: rgba(0, 0, 0, 0.493) 0px 0px 8px;
+  /* box-shadow: rgba(0, 0, 0, 0.493) 0px 0px 8px; */
+  border: 2px solid rgba(0, 0, 0, 0.445);
   overflow-x: hidden;
 }
 .emp-img{
@@ -15,7 +16,7 @@
   margin: 0 1rem;
   object-fit: cover;
   border-radius: 50%;
-  box-shadow: rgba(0, 0, 0, 0.493) 0px 3px 8px;
+  box-shadow: rgb(0, 0, 0) 0px 1px 4px;
 }
 .emp-info {
   text-align: left;

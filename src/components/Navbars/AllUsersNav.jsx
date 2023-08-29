@@ -1,23 +1,27 @@
 import React from "react";
 import "./nav.css";
-import Button from "../Button";
 import LogOut from "../LogOut";
-import {FiUserPlus} from 'react-icons/fi'
+import { FiUserPlus } from "react-icons/fi";
 
-
-const AllUsersNav = ({userName, setOpendailog}) => {
-    
+const AllUsersNav = ({ userName, setOpendailog }) => {
   return (
     <nav>
       <div className="logo scale-up-bl">
         Book <span>my</span> Carrer
       </div>
       <div className="btns">
-        <Button title={<FiUserPlus size={20} />} destination={null} OnClick={ () => setOpendailog(true) } />
+        <button
+          className="scale-up-bl nav-btns"
+          onClick={() => {
+            setOpendailog(true);
+          }}
+        >
+          {<FiUserPlus size={20} />}
+        </button>
         <LogOut />
       </div>
       <div className="nav-profile scale-up-bl">
-        <div className="name">{userName}</div> 
+        <div className="name">{userName}</div>
       </div>
     </nav>
   );

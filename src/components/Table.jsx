@@ -40,8 +40,8 @@ const Table = ({ listOfUsers, onDeleteUser, passingUserId, setOpenDailog }) => {
                   <button
                     className="update-task-btn"
                     onClick={() => {
-                      setOpenDailog(true);
                       passingUserId(user.id);
+                      setOpenDailog(true);
                     }}
                   >
                     {<FiUserCheck size={18} />}
