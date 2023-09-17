@@ -4,84 +4,103 @@ import "./AllUsersDailog.css";
 const AllUsersDailog = ({
   closeDailog,
   setFullname,
-  setAge,
+  setCategory,
   setGender,
   setPhoneNUmber,
-  setEmail,
+  setFatherName,
   submitUser,
+  setRefrence,
+  setDate,
+  setResult,
+  setImportant,
 }) => {
   return (
-    <div className="all-user-dailog">
-      <form className="all-user-form" onSubmit={(e) => {e.preventDefault()}}>
-        <span className="title">Create new user</span>
-        <div className="all-user-inputs">
-          <div className="create-user-col-1">
-            <label htmlFor="fullname" className="label">
-              Full name
-            </label>
-            <input
-              type="text"
-              id="fullname"
-              name="fullname"
-              required=""
-              className="input"
-              onChange={(e) => {setFullname(e.target.value)}}
-            />
-            <label htmlFor="gender" className="label">
-              Gender
-            </label>
-            <input
-              type="text"
-              id="gender"
-              name="gender"
-              required=""
-              className="input"
-              onChange={(e) => setGender(e.target.value)}
-            />
-            <label htmlFor="age" className="label">
-              Age
-            </label>
-            <input
-              type="text"
-              id="age"
-              name="age"
-              required=""
-              className="input"
-              onChange={(e) => setAge(e.target.value)}
-            />
-          </div>
-          <div className="create-user-col-2">
-            <label htmlFor="phone" className="label">
-              Phone Number
-            </label>
-            <input
-              type="text"
-              id="phone"
-              name="phone"
-              required=""
-              className="input"
-              onChange={(e) => setPhoneNUmber(e.target.value)}
-            />
-            <label htmlFor="email" className="label">
-              E-mail
-            </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              required=""
-              className="input"
-              onChange={(e) => setEmail(e.target.value)}
-            />
-            <button className="cancel" onClick={closeDailog}>
-              Cancel
-            </button>
-            <button className="submit" onClick={submitUser}>
-              Register
-            </button>
-          </div>
+    <div className="create-user-container">
+      <div className="create-user-card">
+        <h1>Create user</h1>
+        <div className="create-user-input">
+          <label htmlFor="name">Full name</label>
+          <input
+            type="text"
+            id="name"
+            onChange={(e) => {
+              setFullname(e.target.value);
+            }}
+          />
         </div>
-      </form>
+        <div className="create-user-input">
+          <label htmlFor="fatherName">Father's name</label>
+          <input
+            type="text"
+            id="fatherName"
+            onChange={(e) => setFatherName(e.target.value)}
+          />
+        </div>
+        <div className="create-user-input">
+          <label htmlFor="mobile">Mobile number</label>
+          <input
+            type="text"
+            id="mobile"
+            onChange={(e) => setPhoneNUmber(e.target.value)}
+          />
+        </div>
+        <div className="create-user-input">
+          <label htmlFor="gender">Gender</label>
+          <input
+            type="text"
+            id="gender"
+            onChange={(e) => setGender(e.target.value)}
+          />
+        </div>
+        <div className="create-user-input">
+          <label htmlFor="category">Category</label>
+          <input
+            type="text"
+            id="category"
+            onChange={(e) => setCategory(e.target.value)}
+          />
+        </div>
+        <div className="create-user-input">
+          <label htmlFor="refrence">Refrence</label>
+          <input
+            type="text"
+            id="refrence"
+            onChange={(e) => setRefrence(e.target.value)}
+          />
+        </div>
+        <div className="create-user-input">
+          <label htmlFor="result">Result</label>
+          <input
+            type="text"
+            id="result"
+            onChange={(e) => setResult(e.target.value)}
+          />
+        </div>
+        <div className="create-user-input">
+          <label htmlFor="date">Date</label>
+          <input
+            type="date"
+            id="date"
+            onChange={(e) => setDate(e.target.value)}
+          />
+        </div>
+        <div className="create-user-input">
+          <label htmlFor="confirm">Important?</label>
+          <input
+            type="text"
+            id="confirm"
+            onChange={(e) => setImportant(e.target.value)}
+          />
+        </div>
+        <div className="create-user-btns">
+          <button className="create-user-red-btn" onClick={closeDailog}>
+            Cancel
+          </button>
+          <button className="create-user-green-btn" onClick={submitUser}>
+            Submit
+          </button>
+        </div>
+      </div>
     </div>
   );
 };

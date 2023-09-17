@@ -1,0 +1,68 @@
+.information-box-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.information-box {
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.326) 0px 7px 29px 0px;
+  width: 50%;
+  height: 80%;
+  padding: 0rem 2rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.information-box h2 {
+  text-align: center;
+  font-size: 1.7rem;
+  color: rgba(0, 0, 0, 0.765);
+  margin-bottom: 1.5rem;
+  margin-top: 1.2rem;
+}
+.information-box ul {
+  overflow: auto;
+}
+.information-box li {
+  margin-left: 2rem;
+}
+.info-box-input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.info-box-input input {
+  text-align: center;
+  width: 79%;
+  height: 2rem;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.information-box-btns {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+.information-box-btns button {
+  width: 35%;
+  height: 3rem;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+}
+.information-box-btns button:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.information-box-red-btn {
+  background-color: #ff3c00;
+}
+.information-box-green-btn {
+  background-color: seagreen;
+}

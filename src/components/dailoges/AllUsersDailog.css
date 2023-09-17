@@ -1,90 +1,74 @@
-.all-user-dailog {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-
-.all-user-form {
-  max-width: 60%;
+.create-user-container {
   width: 100%;
-  /* background-color: whitesmoke; */
-  padding: 20px;
-  background: linear-gradient(
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background: linear-gradient(
     191deg,
     rgba(150, 141, 255, 1) 27%,
     rgba(90, 184, 255, 1) 100%
-  );
-  box-shadow: rgba(0, 0, 0, 0.34) 0px 3px 8px;
+  ); */
+}
+.create-user-card {
+  background-color: white;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  width: 70%;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  /* padding: 0rem 1rem; */
+  padding-top: 2rem;
+  margin-top: 1.2rem;
+  margin-left: 1.2rem;
+  margin-bottom: 1.2rem;
   border-radius: 10px;
 }
-
-.title {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #000000b6;
+.create-user-card h1{
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 1rem;
 }
 
-.label {
-  color: rgba(0, 0, 0, 0.671);
-  font-weight: bold;
+.create-user-input {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
 }
-
-.input {
-  padding: 10px;
-  margin-bottom: 20px;
+.create-user-input label {
+  width: 40%;
+  font-size: 1.1rem;
+}
+.create-user-input input,
+.create-user-input textarea {
   width: 100%;
-  font-size: 1rem;
-  color: #4a5568;
-  outline: none;
-  border: 1px solid transparent;
-  border-radius: 7px;
-  transition: all 0.2s ease-in-out;
-  box-shadow: rgba(0, 0, 0, 0.185) 0px 5px 15px;
-  text-align: center;
+  font-size: 1.2rem;
 }
-
-.input:focus {
-  background-color: #fff;
-  box-shadow: 0 0 0 2px #cbd5e0;
+.create-user-input input {
+  height: 2rem;
 }
-
-.submit {
-  background-color: #4a5568;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  font-size: 1rem;
-  font-weight: bold;
+.create-user-btns {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 1.5rem;
+}
+.create-user-btns button {
+  width: 40%;
+  height: 3rem;
+  font-size: 1.2rem;
+  border-radius: 10px;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
+  color: white;
+  font-weight: bold;
 }
-.cancel{
-    background-color: #4a5568;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-    margin-right: 1rem;
+.create-user-btns button:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-.submit:hover{
-  background-color: seagreen;
+.create-user-red-btn{
+    background-color: #ff3c00;
 }
-.cancel:hover{
-  background-color: rgb(255, 17, 0);
-}
-.all-user-inputs{
-    display: flex;
-    align-items: flex-start;
-    gap: 1rem;
+.create-user-green-btn{
+    background-color: seagreen;
 }

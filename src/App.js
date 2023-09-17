@@ -1,4 +1,3 @@
-import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
@@ -10,7 +9,7 @@ import { useState } from "react";
 
 
 function App() {
-  const [username, setUsername] = useState('')
+  const [username, setUsername] = useState('');
   return (
     <>
       <Routes>
