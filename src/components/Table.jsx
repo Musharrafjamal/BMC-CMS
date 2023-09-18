@@ -75,7 +75,7 @@ const Table = ({
     else{
       setUserList(listOfUsers)
     }
-  }, [finalArray, listOfUsers, userlist])
+  }, [finalArray, listOfUsers, userlist, email])
 
   return (
     <div className="table-container">
