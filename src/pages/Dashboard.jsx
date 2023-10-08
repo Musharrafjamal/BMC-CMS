@@ -56,7 +56,7 @@ const Dashboard = ({ email }) => {
     });
   };
   const allusersCounting = async () => {
-    const adminEmail = email;
+    const adminEmail = "musharraf@1.com";
     const adminRef = collection(db, adminEmail);
     const getAdminUsers = await getDocs(adminRef);
 
